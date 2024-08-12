@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="./js/script.js"></script>
+
+    <title>Dashboard social media</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="inter-400">
+    <main>
+      <div class="title-container">
+        <div class="social-dashboard-container inter-700">
+          <h1>Panel de redes sociales</h1>
+          <p>Seguidores Totales: 23,004</p>
+          <p>Fecha y hora actual: <span id="current-date-time"></span></p>
+        </div>
+        <div class="theme-container">
+          <label class="inter-700" for="toggle">
+            Modo Oscuro
+
+            <input type="checkbox" name="toggle" id="toggle" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="facebook-followers total-card">
+          <div class="followers-handle inter-700">
+            <img src="./images/icon-facebook.svg" alt="facebook logo" />
+            <p>@pepe</p>
+          </div>
+          <div class="followers-number">
+            <h2 class="inter-700">1987</h2>
+            <p>SEGUIDORES</p>
+          </div>
+          <div class="followers-percentage inter-700">
+            <img src="./images/icon-up.svg" alt="triangle" />
+            <p>12 Hoy</p>
+          </div>
+        </div>
+        <div class="twitter-followers total-card">
+          <div class="followers-handle inter-700">
+            <img src="./images/icon-twitter.svg" alt="blue bird" />
+            <p>@pepe</p>
+          </div>
+          <div class="followers-number">
+            <h2 class="inter-700">1044</h2>
+            <p>SEGUIDORES</p>
+          </div>
+          <div class="followers-percentage inter-700">
+            <img src="./images/icon-up.svg" alt="triangle" />
+            <p>99 Hoy</p>
+          </div>
+        </div>
+        <div class="instagram-followers total-card">
+          <div class="followers-handle inter-700">
+            <img src="./images/icon-instagram.svg" alt="instagram logo" />
+            <p>@realpepe</p>
+          </div>
+          <div class="followers-number">
+            <h2>11k</h2>
+            <p>SEGUIDORES</p>
+          </div>
+          <div class="followers-percentage inter-700">
+            <img src="./images/icon-up.svg" alt="triangle" />
+            <p>1099 Hoy</p>
+          </div>
+        </div>
+        <div class="youtube-subs total-card">
+          <div class="followers-handle inter-700">
+            <img src="./images/icon-youtube.svg" alt="youtube logo" />
+            <p>Pepe L.</p>
+          </div>
+          <div class="followers-number">
+            <h2>8239</h2>
+            <p>SUSCRIPTORES</p>
+          </div>
+          <div class="followers-percentage inter-700">
+            <img src="./images/icon-down.svg" alt="upside down triangle" />
+            <p>144 HOY</p>
+          </div>
+        </div>
+
+        <div class="overview">
+          <h2 class="inter-700">Resumen - Hoy</h2>
+        </div>
+        <div class="facebook-pageviews today-card">
+          <div class="today-views">
+            <p class="inter-700">Vistas de página</p>
+            <h3>87</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-facebook.svg" alt="facebook logo" />
+            <div>
+              <img src="./images/icon-up.svg" alt="triangle" />
+              <p class="inter-700">3%</p>
+            </div>
+          </div>
+        </div>
+        <div class="facebook-likes today-card">
+          <div class="today-views">
+            <p class="inter-700">Likes</p>
+            <h3>52</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-facebook.svg" alt="facebook logo" />
+            <div>
+              <img src="./images/icon-down.svg" alt="upside down triangle" />
+              <p class="inter-700 negative-percentage">2%</p>
+            </div>
+          </div>
+        </div>
+        <div class="instagram-likes today-card">
+          <div class="today-views">
+            <p class="inter-700">Likes</p>
+            <h3>5462</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-instagram.svg" alt="instagram logo" />
+            <div>
+              <img src="./images/icon-up.svg" alt="upside  triangle" />
+              <p class="inter-700">2257%</p>
+            </div>
+          </div>
+        </div>
+        <div class="instagram-pageviews today-card">
+          <div class="today-views">
+            <p class="inter-700">Vistas de perfil</p>
+            <h3>52k</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-instagram.svg" alt="instagram logo" />
+            <div>
+              <img src="./images/icon-up.svg" alt="triangle" />
+              <p class="inter-700">1375%</p>
+            </div>
+          </div>
+        </div>
+        <div class="twitter-retweets today-card">
+          <div class="today-views">
+            <p class="inter-700">Retweets</p>
+            <h3>117</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-twitter.svg" alt="twitter logo" />
+            <div>
+              <img src="./images/icon-up.svg" alt="triangle" />
+              <p class="inter-700">303%</p>
+            </div>
+          </div>
+        </div>
+        <div class="twitter-likes today-card">
+          <div class="today-views">
+            <p class="inter-700">Likes</p>
+            <h3>507</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-twitter.svg" alt="twitter logo" />
+            <div>
+              <img src="./images/icon-up.svg" alt="triangle" />
+              <p class="inter-700">553%</p>
+            </div>
+          </div>
+        </div>
+        <div class="youtube-likes today-card">
+          <div class="today-views">
+            <p class="inter-700">Likes</p>
+            <h3>107</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-youtube.svg" alt="youtube logo" />
+            <div>
+              <img src="./images/icon-down.svg" alt=" upsidedown triangle" />
+              <p class="inter-700 negative-percentage">19%</p>
+            </div>
+          </div>
+        </div>
+        <div class="youtube-views today-card">
+          <div class="today-views">
+            <p class="inter-700">Vistas totales</p>
+            <h3>1407</h3>
+          </div>
+          <div class="overview-percentage">
+            <img src="./images/icon-youtube.svg" alt="youtube logo" />
+            <div>
+              <img src="./images/icon-down.svg" alt=" upsidedown triangle" />
+              <p class="inter-700 negative-percentage">12%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

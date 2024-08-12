@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.inter-700 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+:root {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --heading-text: hsl(230, 17%, 14%);
+  --subheading-text: hsl(228, 12%, 44%);
+
+  --toggle-theme: hsl(232, 22%, 74%);
+
+  --toggle-button-bg: hsl(240, 24%, 96%);
+
+  --dark-theme-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+
+  --card-bg-hover: hsl(232, 33%, 91%);
+  --Lime-Green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+}
+
+:root.dark-mode {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+
+  --heading-text: hsl(0, 0%, 100%);
+  --subheading-text: var(--heading-text);
+
+  --toggle-button-bg: var(--bg);
+  --card-bg-hover: hsl(228, 26%, 27%);
+  --toggle-theme: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+
+  --dark-theme-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: grid;
+
+  background-color: var(--bg);
+}
+
+main {
+  height: 100%;
+
+  display: grid;
+  margin-block-end: 2rem;
+}
+
+.social-dashboard-container {
+  z-index: 32;
+  border-bottom: 1px solid var(--heading-text);
+  width: 100%;
+  padding-block-end: 1.5rem;
+}
+.social-dashboard-container > h1 {
+  color: var(--heading-text);
+
+  font-size: clamp(1.5rem, 1.412rem + 0.3756vw, 1.75rem);
+}
+.social-dashboard-container > p {
+  font-size: 0.89rem;
+  line-height: 1.3;
+  color: var(--subheading-text);
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 1 / -1;
+  background-color: var(--top-bg-pattern);
+  height: fit-content;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-block: 2rem clamp(5.1rem, 3.5507rem + 6.6103vw, 9.5rem);
+  padding-inline: clamp(1rem, -2.2394rem + 13.8216vw, 10.2rem)
+    clamp(1rem, -2.2746rem + 13.9718vw, 10.3rem);
+}
+.theme-container {
+  z-index: 31;
+
+  padding-block-start: 1rem;
+  width: 100%;
+}
+/* Toggle Switch start */
+label {
+  transition: 0.5s ease;
+  display: flex;
+  cursor: pointer;
+  color: var(--subheading-text);
+  gap: clamp(0.7rem, 16.7901rem + -17.8779vw, 12.6rem);
+  font-size: 0.9rem;
+
+  justify-content: space-between;
+}
+
+#toggle {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  background: var(--toggle-theme);
+  border-radius: 2rem;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1.1rem;
+  width: 1.1rem;
+  left: 1.7rem;
+  top: 0.2rem;
+  background-color: var(--toggle-button-bg);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#toggle + .slider:hover {
+  background: var(--dark-theme-toggle);
+}
+
+#toggle:checked + .slider::before {
+  transform: translateX(-1.5rem);
+}
+
+/* Toggle Switch end  */
+.total-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-bg);
+  transition: 0.5s ease;
+
+  padding-inline: clamp(4rem, 6.907rem + -3.23vw, 6.15rem);
+
+  border-radius: 0.3rem;
+  padding-block: 1.7rem 1.5rem;
+
+  gap: 1.27rem;
+}
+
+.total-card:hover {
+  cursor: pointer;
+  background-color: var(--card-bg-hover);
+}
+.total-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.followers-handle > p {
+  color: var(--subheading-text);
+  font-size: 0.75rem;
+}
+
+.total-card > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.followers-number > h2 {
+  color: var(--heading-text);
+  font-size: 3.5rem;
+  letter-spacing: -0.12rem;
+  line-height: 1.12;
+}
+.followers-number > p {
+  color: var(--subheading-text);
+  font-size: 0.8rem;
+  letter-spacing: 0.29rem;
+}
+.total-card > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.followers-percentage > p {
+  color: var(--Lime-Green);
+  font-size: 0.78rem;
+}
+.cards {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, max-content));
+
+  grid-auto-rows: auto;
+  justify-content: center;
+  height: max-content;
+  padding-block-start: clamp(8.5rem, 13.2324rem + -5.2582vw, 12rem);
+  gap: clamp(1.5rem, 1.3944rem + 0.4507vw, 1.8rem);
+}
+.overview {
+  color: var(--subheading-text);
+  width: 100%;
+  height: fit-content;
+  grid-column: 1 / -1;
+  /* grid-row: 2;
+  grid-column: 1 / -1; */
+}
+.facebook-followers {
+  border-top: 4px solid hsl(208, 92%, 53%);
+  /* grid-row: 1;
+  grid-column: 1; */
+}
+.twitter-followers {
+  border-top: 4px solid hsl(203, 89%, 53%);
+  padding-inline: 3.8rem 3.7rem;
+  /* grid-row: 1;
+  grid-column: 2; */
+}
+
+.twitter-followers .followers-number > h2 {
+  line-height: 1.15;
+}
+.instagram-followers {
+  padding-inline: 4.3rem;
+  background: linear-gradient(var(--card-bg), var(--card-bg)),
+    linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+
+  border-top: 4px solid transparent;
+  transition: 0.5s ease;
+
+  /* grid-row: 1;
+  grid-column: 3; */
+}
+
+.instagram-followers:hover {
+  background: linear-gradient(var(--card-bg-hover), var(--card-bg-hover)),
+    linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border-top: 4px solid transparent;
+}
+.youtube-subs {
+  padding-inline: 3.65rem;
+  border-top: 4px solid hsl(348, 97%, 39%);
+  /* grid-row: 1;
+  grid-column: 4; */
+}
+.youtube-subs .followers-percentage p {
+  color: var(--bright-red);
+}
+
+.today-card {
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.2rem;
+  padding-inline: 1.5rem 2rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.today-card:hover {
+  cursor: pointer;
+  background-color: var(--card-bg-hover);
+}
+.today-views {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.today-views > h3 {
+  color: var(--heading-text);
+  font-size: 2rem;
+}
+.today-views > p {
+  color: var(--subheading-text);
+  font-size: 0.85rem;
+}
+.overview-percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.5rem;
+}
+.overview-percentage > div {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--Lime-Green);
+  font-size: 0.78rem;
+}
+.negative-percentage {
+  color: var(--bright-red);
+}
+
+@media (min-width: 72.5625rem) {
+  .social-dashboard-container {
+    width: max-content;
+    border-bottom: 0;
+    padding-block-end: 0;
+  }
+
+  .theme-container {
+    padding-block-start: 0rem;
+    width: max-content;
+  }
+  .title-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .cards {
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+  }
+  .overview {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .facebook-followers {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .twitter-followers {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .instagram-followers {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .youtube-subs {
+    grid-row: 1;
+    grid-column: 4;
+  }
+  .facebook-pageviews {
+    grid-row: 3;
+  }
+  .facebook-likes {
+    grid-row: 3;
+  }
+  .instagram-likes {
+    grid-row: 3;
+  }
+  .instagram-pageviews {
+    grid-row: 3;
+  }
+  .twitter-retweets {
+    grid-row: 4;
+  }
+  .twitter-likes {
+    grid-row: 4;
+  }
+  .youtube-likes {
+    grid-row: 4;
+  }
+  .youtube-views {
+    grid-row: 4;
+  }
+}
