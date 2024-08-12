@@ -20,8 +20,7 @@ Este proyecto es un panel de redes sociales desarrollado con **HTML**, **CSS** y
 - **JavaScript**: Lógica del modo oscuro/claro y actualización de datos en tiempo real.
 
 ## 🚀 Demostración
-Puedes ver una demostración en vivo del proyecto [aquí](#). *(Reemplaza este enlace con el enlace a tu demo en vivo si está disponible.)*
-
+Puedes ver una demostración en vivo del proyecto [aquí](https://josecondori-ai.github.io/Social-Media-Dashboard/).
 ## Cómo Usar
 1. 🚀 Clona el repositorio:
     ```bash
