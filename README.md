@@ -1,5 +1,10 @@
 # 🌐 Social Media Dashboard
 
+
+
+https://github.com/user-attachments/assets/df4b925c-9db4-46f3-8b3e-3b491ef70a66
+
+
 ## 📋 Visión General
 Este proyecto es un panel de redes sociales desarrollado con **HTML**, **CSS** y **JavaScript**. Su propósito es proporcionar una interfaz de usuario simple y funcional para gestionar y visualizar estadísticas de diferentes plataformas de redes sociales. 
 
@@ -20,13 +25,13 @@ Puedes ver una demostración en vivo del proyecto [aquí](#). *(Reemplaza este e
 ## Cómo Usar
 1. 🚀 Clona el repositorio:
     ```bash
-    https://github.com/josecondori-ai/Lista-de-Productos-con-Carrito.git
+    https://github.com/josecondori-ai/Social-Media-Dashboard.git
     ```
 2. 📂 Navega al directorio del proyecto:
     ```bash
-    cd Lista-de-Productos-con-Carrito
+    cd Social-Media-Dashboard
     ```
-3. 🌐 Abre el archivo `index.html` en tu navegador para ver las tarjetas en acción.
+3.  🌐Abre index.html en tu navegador para ver el panel en acción.
 
 ## Contribuir
 ¡Las contribuciones son bienvenidas! 🙌 Si deseas mejorar este proyecto, por favor sigue estos pasos:
